@@ -1,0 +1,68 @@
+{{!
+Це код container файлу для education сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/person"
+}}
+<div>
+  {{#with web}}
+    <section>
+      {{#each languages}}
+        <h1>{{name}}</h1>
+        <b> {{version}}</b>
+        <br />
+        {{description}}
+
+        <ul>
+          {{#each elements}}
+            <li>
+              <p>
+                <b>{{name}}</b>
+                ({{description}})
+              </p>
+              <ul>
+                {{#each attributes}}
+                  <li>
+                    <p>
+                      <b>{{name}}</b>
+                      ({{description}})
+                    </p>
+                  </li>
+                {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+        <ul>
+          {{#each properties}}
+            <li>
+              <p>
+                <b>"{{name}}"</b>
+                ({{description}})
+              </p>
+              <ul>
+                {{#each values}}
+                  <li>
+                    <p>
+                      <b>"{{value}}"</b>
+                      ({{description}})
+                    </p>
+                  </li>
+                {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+        <ul>
+          {{#each functions}}
+            <li>
+              <p>
+                <b>{{name}}</b>
+                ({{description}})
+              </p>
+            </li>
+          {{/each}}
+        </ul>
+        <hr />
+      {{/each}}
+    </section>
+  {{/with}}
+</div>
