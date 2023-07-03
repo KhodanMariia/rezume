@@ -1,0 +1,104 @@
+{{!
+Це код container файлу для education сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/person"
+}}
+<div>
+
+  {{#with programs}}
+    {{#with excursion}}
+      <h1>{{name}}</h1>
+      {{#with location}}
+        <p>
+          <b>city:</b>
+          {{city}}
+        </p>
+        <p>
+          <b>country:</b>
+          {{country}}
+        </p>
+      {{/with}}
+      <p>
+        <b>date:</b>
+        {{date}}
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      {{#each program}}
+        <h3>{{name}}</h3>
+        <p>
+          <b>{{type}} ({{duration}})</b>
+        </p>
+
+        {{#with details}}
+
+          {{#with museum}}
+            <p>name:
+              <b>{{name}}</b>
+            </p>
+            {{#with location}}
+              <p>address: {{address}}</p>
+              <p>citi: {{city}}</p>
+              <p>country: {{country}}</p>
+            {{/with}}
+
+            <ul>
+              {{#each exhibits}}
+                <li>
+                  <p>name:
+                    <b>{{name}}</b>
+                  </p>
+                  <p>
+                    {{artist}}
+                  </p>
+                  <p>description:
+                    {{description}}
+                  </p>
+                  <p>audio guide:
+                    {{audio_guide}}
+                  </p>
+                </li>
+              {{/each}}
+            </ul>
+
+          {{/with}}
+
+          {{#with venue}}
+            <p>
+              <b>venue: {{name}}</b>
+            </p>
+            <b>location:</b>
+            {{#with location}}
+              <p>address: {{address}}</p>
+              <p>city: {{city}}</p>
+              <p>country: {{country}}</p>
+            {{/with}}
+          {{/with}}
+
+          <ul>
+            {{#each performers}}
+              <li>
+                <p>performers:
+                  <b>{{name}}</b>
+                </p>
+                {{type}}
+              </li>
+            {{/each}}
+          </ul>
+
+          {{#with guide}}
+            <p>
+              <b>guide:</b>
+              {{name}}
+            </p>
+            <p>language: {{language}}</p>
+            <p>rating: ({{rating}})</p>
+          {{/with}}
+          <hr />
+          <br />
+        {{/with}}
+      {{/each}}
+    {{/with}}
+  {{/with}}
+</div>
