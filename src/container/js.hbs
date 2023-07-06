@@ -1,0 +1,149 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+
+<div>
+    <section>
+
+     <h1>{{name}}</h1>
+     <p>{{ description}}</p>
+     {{#with history }}
+      <p>
+        founder:
+        <span class="badge bg-secondary">{{founder}} ({{year}})</span> 
+      </p>
+     {{/with}}
+     </section>
+     <section>
+            {{>title data='types' big=true}}
+        
+            <span class="badge bg-secondary">{{types.[0]}}</span>
+            <span class="badge bg-secondary">{{types.[1]}}</span>
+            <span class="badge bg-secondary">{{types.[2]}}</span>
+            <span class="badge bg-secondary">{{types.[3]}}</span>
+            <span class="badge bg-secondary">{{types.[4]}}</span>
+            <span class="badge bg-secondary">{{types.[5]}}</span>
+            <span class="badge bg-secondary">{{types.[6]}}</span>
+    </section>
+    <section>
+        {{#with syntax}}
+           {{>title data='syntax' big=true}}
+           {{#with variables}}
+                <p>variables:
+                <span class="badge bg-secondary">
+                   {{this.[0]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[1]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[2]}} 
+                </span>
+                </p>
+           {{/with}}
+           {{#with functions}}
+                <p>functions: 
+                     <span class="badge bg-secondary">
+                   {{this.[0]}} 
+                </span>
+                </p>
+           {{/with}}
+           {{#with conditionals}}
+                <p>conditionals: 
+                    <span class="badge bg-secondary">
+                   {{this.[0]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[1]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[2]}} 
+                </span>
+                </p>
+           {{/with}}
+           {{#with loops}}
+                <p>loops: 
+                     <span class="badge bg-secondary">
+                   {{this.[0]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[1]}} 
+                </span>
+                <span class="badge bg-secondary">
+                    {{this.[2]}} 
+                </span>
+                </p>
+           {{/with}}
+           {{#with classes}}
+                <p>classes: 
+                     <span class="badge bg-secondary">
+                   {{this.[0]}} 
+                </span>
+                </p>
+           {{/with}}
+        {{/with}}
+    </section>
+    <section>
+        {{>title data='features' big=true}}
+        {{#with features}}
+        {{this.[0]}}
+         <br>
+         {{this.[1]}}
+         <br>
+          {{this.[2]}}
+         <br>
+          {{this.[3]}}
+         <br>
+          {{this.[4]}}
+         <br>
+          {{this.[5]}}
+         <br>
+        {{/with}}
+    </section>
+    <section>
+            {{>title data='libraries' big=true}}
+        
+            <button type="button" class="btn ">{{libraries.[0]}}</button>
+            <button type="button" class="btn ">{{libraries.[1]}}</button>
+            <button type="button" class="btn ">{{libraries.[2]}}</button>
+            <button type="button" class="btn ">{{libraries.[3]}}</button>
+            <br>
+            <button type="button" class="btn ">{{libraries.[4]}}</button>
+            <button type="button" class="btn ">{{libraries.[5]}}</button>
+            <button type="button" class="btn ">{{libraries.[6]}}</button>
+            <button type="button" class="btn ">{{libraries.[7]}}</button>
+    </section>
+    <section>
+            {{>title data='tools' big=true}}
+        
+            <span class="badge bg-secondary">{{tools.[0]}}</span>
+            <span class="badge bg-secondary">{{tools.[1]}}</span>
+            <span class="badge bg-secondary">{{tools.[2]}}</span>
+            <span class="badge bg-secondary">{{tools.[3]}}</span>
+            <span class="badge bg-secondary">{{tools.[4]}}</span>
+            <span class="badge bg-secondary">{{tools.[5]}}</span>
+            <span class="badge bg-secondary">{{tools.[6]}}</span>
+            <span class="badge bg-secondary">{{tools.[7]}}</span>
+    </section>
+    <section>
+            {{>title data='community' big=true}}
+             <ul>
+            {{#each community}}
+                <li>
+                    <p>{{type}}
+                        <button type="button" class="btn btn-primary">{{name}}</button>
+                    </p> 
+                </li>
+            {{/each}}
+           </ul>
+    </section>
+    
+ 
+
+</div>
+
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/basic.hbs має вже структуру HTML
+}}
