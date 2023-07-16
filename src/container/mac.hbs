@@ -1,0 +1,191 @@
+<div>
+  <section>
+    <h1>
+      {{name}}
+      <span class='badge bg-secondary'>New
+      </span>
+    </h1>
+    <b>{{description}}</b>
+    <br />
+    <p>
+      <mark>Price: {{price}}</mark>
+    </p>
+    <hr />
+    <div
+      class='card text-bg-secondary mb-3'
+      style='max-width: 18rem;'
+    >
+      <div class='card-header'>{{name}}</div>
+      <div class='card-body'>
+        <h5 class='card-title'>{{description}}</h5>
+        <p class='card-text'>
+          price:
+          {{price}},
+          <br />
+          category:
+          {{category}},
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <h3>Features</h3>
+      {{#with features}}
+        <div>
+          {{#with processor}}
+            <h5>processor</h5>
+            brand:
+            <em>{{brand}},</em>
+            <br />
+            model:
+            <em>{{model}},</em>
+            <br />
+            speed:
+            <em>{{speed}},</em>
+            <br />
+            cores:
+            <em>{{cores}},</em>
+            <br />
+            cache:
+            <em>{{cache}},</em>
+          {{/with}}
+        </div>
+        <hr />
+        <div>
+          {{#with memory}}
+            <h5>memory</h5>
+            type:
+            <em>{{type}},</em>
+            <br />
+            size:
+            <em>{{size}},</em>
+            <br />
+            speed:
+            <em>{{speed}},</em>
+          {{/with}}
+        </div>
+        <hr />
+        <div>
+          {{#with storage}}
+            <h5>storage</h5>
+            type:
+            <em>{{type}},</em>
+            <br />
+            size:
+            <em>{{size}},</em>
+          {{/with}}
+        </div>
+        <hr />
+        <div>
+          {{#with display}}
+            <h5>display</h5>
+            size:
+            <em>{{size}},</em>
+            <br />
+            resolution:
+            <em>{{resolution}},</em>
+            <br />
+            technology:
+            <em>{{technology}},</em>
+            <br />
+            color space:
+            <em>{{color_space}},</em>
+            <br />
+            brightness:
+            <em>{{brightness}},</em>
+            <br />
+            refresh rate:
+            <em>{{refresh_rate}},</em>
+          {{/with}}
+        </div>
+        <hr />
+        <div>
+          {{#with graphics}}
+            <h5>graphics</h5>
+            brand:
+            <em>{{brand}},</em>
+            <br />
+            model:
+            <em>{{model}},</em>
+            <br />
+            memory:
+            <em>{{memory}},</em>
+          {{/with}}
+        </div>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <div>
+        <h5>Ports</h5>
+      <ul>
+        {{#each ports}}
+          <li>
+            {{type}},
+            <br />
+            {{count}}
+            <ul> 
+                {{#each features}}
+                <li>{{this}}</li>  
+                {{/each}}
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+     <hr />
+        <div>
+          {{#with battery}}
+            <h5>Battery</h5>
+            type:
+            <em>{{type}},</em>
+            <br />
+           capacity:
+            <em>{{capacity}},</em>
+            <br />
+            life:
+            <em>{{life}},</em>
+          {{/with}}
+        </div>
+        <hr />
+        <div>
+         weight:
+         <em>{{weight}}</em>
+        </div>
+        <hr />
+        <div>
+          {{#with dimensions}}
+            <h5>Dimensions</h5>
+            height:
+            <em>{{height}},</em>
+            <br />
+           width:
+            <em>{{width}},</em>
+            <br />
+            depth:
+            <em>{{depth}},</em>
+          {{/with}}
+        </div>
+         <hr />
+        <div>
+         operating system:
+         <em>{{operating_system}}</em>
+        </div>
+  </section>
+    <hr />
+  <section>
+    <div>
+        <h5>Accessories</h5>
+      <ul>
+        {{#each accessories}}
+          <li>
+           name: <i>{{name}}</i>
+            <br />
+            price: <b>{{price}}</b>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    </section>
+  {{/with}}
+</div>
