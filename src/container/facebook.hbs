@@ -1,0 +1,60 @@
+<div>
+  <section>
+    <h1>{{name}}</h1>
+    <ul class='list-group'>
+      <h3>Users</h3>
+      {{#each users}}
+        <li class='list-group-item'>
+          id:
+          <em>{{id}}</em>,
+          <br />
+          name:
+          <b>{{name}}</b>,
+          <br />
+          gender:
+          <em>{{gender}}</em>,
+          <br />
+          age:
+          <em>{{age}}</em>
+          <ul>
+            <i>Friends</i>
+            {{#each friends}}
+              <li>
+                id:
+                <em>{{id}}</em>,
+                <br />
+                name:
+                <b>{{name}}</b>,
+                <br />
+                gender:
+                <em>{{gender}}</em>,
+                <br />
+                age:
+                <em>{{age}}</em>
+                <ul>
+                  <i>Mutual friends</i>
+                  <li>
+                    id:
+                    <em>{{id}}</em>,
+                    <br />
+                    name:
+                    <b>{{name}}</b>,
+                    <br />
+                    gender:
+                    <em>{{gender}}</em>,
+                    <br />
+                    age:
+                    <em>{{age}}</em>
+
+                  </li>
+                </ul>
+              </li>
+
+            {{/each}}
+          </ul>
+        </li>
+
+      {{/each}}
+    </ul>
+  </section>
+</div>
