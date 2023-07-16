@@ -33,27 +33,111 @@
                 <em>{{age}}</em>
                 <ul>
                   <i>Mutual friends</i>
-                  <li>
-                    id:
-                    <em>{{id}}</em>,
-                    <br />
-                    name:
-                    <b>{{name}}</b>,
-                    <br />
-                    gender:
-                    <em>{{gender}}</em>,
-                    <br />
-                    age:
-                    <em>{{age}}</em>
+                  {{#each mutual_friends}}
+                    <li>
+                      id:
+                      <em>{{id}}</em>,
+                      <br />
+                      name:
+                      <b>{{name}}</b>,
+                      <br />
+                      gender:
+                      <em>{{gender}}</em>,
+                      <br />
+                      age:
+                      <em>{{age}}</em>
+                      <ol>
+                        {{#each mutual_friends}}
+                          <i>Mutual friends</i>
+                          <li>
+                            id:
+                            <em>{{id}}</em>,
+                            <br />
+                            name:
+                            <b>{{name}}</b>,
+                            <br />
+                            gender:
+                            <em>{{gender}}</em>,
+                            <br />
+                            age:
+                            <em>{{age}}</em>
 
-                  </li>
+                          </li>
+                        {{/each}}
+                      </ol>
+                    </li>
+                  {{/each}}
+                </ul>
+                <ul>
+                  {{#each groups}}
+                    <i>Group</i>
+                    <li>
+                      id:
+                      <em>{{id}}</em>,
+                      <br />
+                      name:
+                      <b>{{name}}</b>,
+                      <br />
+                      description:
+                      <em>{{description}}</em>
+                      <ul>
+                        <i>Members</i>
+                        {{#each members}}
+                          <li>
+                            id:
+                            <em>{{id}}</em>,
+                            <br />
+                            name:
+                            <b>{{name}}</b>,
+                            <br />
+                            gender:
+                            <em>{{gender}}</em>,
+                            <br />
+                            age:
+                            <em>{{age}}</em>
+                          </li>
+                        {{/each}}
+                      </ul>
+                    </li>
+                  {{/each}}
                 </ul>
               </li>
-
+            {{/each}}
+          </ul>
+          <ul>
+            {{#each groups}}
+              <i>Group</i>
+              <li>
+                id:
+                <em>{{id}}</em>,
+                <br />
+                name:
+                <b>{{name}}</b>,
+                <br />
+                description:
+                <em>{{description}}</em>
+                <ul>
+                  <i>Members</i>
+                  {{#each members}}
+                    <li>
+                      id:
+                      <em>{{id}}</em>,
+                      <br />
+                      name:
+                      <b>{{name}}</b>,
+                      <br />
+                      gender:
+                      <em>{{gender}}</em>,
+                      <br />
+                      age:
+                      <em>{{age}}</em>
+                    </li>
+                  {{/each}}
+                </ul>
+              </li>
             {{/each}}
           </ul>
         </li>
-
       {{/each}}
     </ul>
   </section>
