@@ -1,0 +1,143 @@
+<main>
+  <div class='card m-3'>
+    {{#with navigation}}
+      <div class='row'>
+        <div class='col-12'>
+          <div class='nav nav-tabs'>
+            {{#each links}}
+              <div class='nav-item'>
+                <a
+                  href='{{href}}'
+                  class='nav-link'
+                >{{text}}</a>
+              </div>
+            {{/each}}
+            <div class='nav-item'>
+                <a
+                  href='{{href}}'
+                  class='nav-link disabled'
+                >Disabled</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+  <section>
+    <div class='card mb-5'>
+      {{#with newsBlock}}
+        <h1 class='text-center mt-5 mb-4'>{{title}}</h1>
+        <div class='row g-4'>
+        {{#each cards}}
+            <div class='col-3'>
+              <div class="nav flex-colum">
+                <div class="nav-item">
+                  <div class='card text-bg-secondary'>
+                    <div class='card-body p-2'>
+                      <div class='card-header'>{{title}} 
+                      {{>spanTop}}
+                      {{>spanNew}} 
+                      </div>
+                      <p>{{description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {{/each}}
+      {{/with}}
+    </div>
+  </section>
+  <hr>
+  <section>
+ {{#with goodsBlock}}
+      <div class='row mt-5 mb-5'>
+        <div class='col-12'>
+          <div class='nav nav-tabs'>
+            {{#each tabs}}
+                    {{>isActive}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+        <div class='row g-4 mt-5'>
+        {{#each cards}}
+            <div class='col-4'>
+              <div class="nav flex-colum">
+                <div class="nav-item">
+                  <div class='card text-bg-secondary'>
+                     <img
+                    class='card-img-top'
+                    src='{{image}}' 
+                    />
+                    <div class='card-body m-1'>
+                        <div class='card-header'>{{title}}
+                            {{>spanHot}} 
+                            {{>spanNew}} 
+                        </div>
+                        <p>{{description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {{/each}}
+      {{/with}}
+  </section>
+  <hr>
+  <section>
+    <div class="card text-bg-dark mt-3 mb-3">
+        {{#with subscribe}}
+        <div class='card-body'>
+         <h2>{{header}}</h2>
+         <p>{{description}}</p>
+         {{#each buttons}}
+         <button class='bg-primary mb-2' src='{{link}}'>
+            {{text}}
+        </button>
+        <br>
+         {{/each}}
+        </div>
+        {{/with}}
+    </div>
+  </section>
+  <hr>
+  <section>
+    <div class='card text-bg-success text-center mt-3 mb-3'>
+        {{#with service}}
+        <div class='card-body'>
+            <h2>{{title}}</h2>
+            <p>{{description}}</p>
+            {{#each buttons}}
+                <button class='bg-primary' src='{{link}}'>
+                    {{text}}
+                </button>
+                <br>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+  </section>
+  <hr>
+  <section>
+    <div class='mb-5 mt-5'>
+      {{#each footer}}
+          <div class='row g-2'>
+            {{!-- <div class='col-12'> --}}
+                <div class='nav nav-tabs'>
+                    {{#each this}}
+                     <div class='col-2'>
+                        <div class='nav-item me-3'>
+                           <a class='nav-link'
+                           href='{{link}}'>
+                           {{text}}
+                           </a>
+                        </div>
+                        </div>
+                    {{/each}}
+                {{!-- </div> --}}
+            </div>
+      {{/each}}
+    </div>
+  </section>
+</main>
