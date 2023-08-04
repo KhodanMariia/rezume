@@ -1,0 +1,15 @@
+{{#if isSuccess}}
+  <button class='btn btn-success'>
+    {{text}}
+  </button>
+{{else}}
+  {{#if isDanger}}
+    <button class='btn btn-danger'>
+      {{text}}
+    </button>
+  {{else}}
+    <button class='btn btn-info'>
+      {{text}}
+    </button>
+  {{/if}}
+{{/if}}
