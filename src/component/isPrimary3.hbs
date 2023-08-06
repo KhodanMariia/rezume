@@ -1,0 +1,12 @@
+{{#if isPrimary}}
+  <button class='btn btn-primary mb-3'>
+    {{text}}
+    </button>
+    <br>
+{{else}}
+  <button 
+  {{#if isDanger}}
+  class='btn btn-outline-danger'
+  {{/if}}>{{text}}
+  </button>
+{{/if}}
