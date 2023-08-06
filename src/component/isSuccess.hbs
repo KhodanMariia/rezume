@@ -1,0 +1,16 @@
+{{#if isSuccess}}
+  <button 
+  class='btn btn-success mb-3'
+  src='{{link}}'> 
+  {{text}}
+  </button>
+  <br>
+{{else}}
+  <button 
+  {{#if isOutline}}
+  class='btn btn-outline-success'
+  src='{{link}}'
+  {{/if}}>
+  {{text}}
+  </button>
+{{/if}}
