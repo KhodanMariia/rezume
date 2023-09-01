@@ -3,10 +3,10 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
 }}
 
-<div>
-  <section>
-    <div>
-      <h1>{{name}}</h1>
+<main class="m-5">
+  <section  class="card">
+    <div class="card-body">
+      <h1 class="mb-5">{{name}}</h1>
       <p>
         <b>birthdate:</b>{{birthdate}}
       </p>
@@ -30,8 +30,8 @@
       </p>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>Education:</h3>
       <ul>
         {{#each education}}
@@ -55,8 +55,8 @@
       </ul>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>Notable publications:</h3>
       <ul>
         {{#each notable_publications}}
@@ -68,8 +68,8 @@
       </ul>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3"> 
+    <div class="card-body">
       <h3>partners:</h3>
       <ul>
         {{#each partners}}
@@ -88,8 +88,8 @@
       </ul>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>awards:</h3>
       <ul>
         {{#each awards}}
@@ -104,8 +104,8 @@
       </ul>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>Influences:</h3>
       {{#with influences}}
         {{0}}
@@ -115,7 +115,7 @@
         {{2}}
       {{/with}}
     </div>
-    <div>
+    <div class="card-body">
       <h3>Influenced:</h3>
       {{#with influenced}}
         {{0}}
@@ -127,7 +127,7 @@
         {{3}}
       {{/with}}
     </div>
-    <div>
+    <div class="card-body">
       <h3> quotes:</h3>
       {{#with quotes}}
         {{0}}
@@ -139,8 +139,8 @@
         {{3}}
       {{/with}}</div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>Major discoveries:</h3>
       <ul>
         {{#each major_discoveries}}
@@ -155,8 +155,8 @@
       </ul>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="card mt-3">
+    <div class="card-body">
       <h3>Contributions:</h3>
       {{#with contributions}}
         <b>{{title}}</b>
