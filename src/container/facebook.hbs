@@ -1,67 +1,86 @@
 <div>
   <section>
     <h1>{{name}}</h1>
-    <ul class='list-group'>
+    <ul class='list-group row'>
       <h3>Users</h3>
       {{#each users}}
         <li class='list-group-item'>
-          id:
-          <em>{{id}}</em>,
-          <br />
-          name:
-          <b>{{name}}</b>,
-          <br />
-          gender:
-          <em>{{gender}}</em>,
-          <br />
-          age:
-          <em>{{age}}</em>
+          <p>
+            id:
+            <em>{{id}}</em>
+          </p>
+          <p>
+            name:
+            <b>{{name}}</b>
+          </p>
+          <p>
+            gender:
+            <em>{{gender}}</em>
+          </p>
+          <p>
+            age:
+            <em>{{age}}</em>
+          </p>
           <ul>
             <i>Friends</i>
             {{#each friends}}
-              <li>
-                id:
-                <em>{{id}}</em>,
-                <br />
-                name:
-                <b>{{name}}</b>,
-                <br />
-                gender:
-                <em>{{gender}}</em>,
-                <br />
-                age:
-                <em>{{age}}</em>
+              <li class='mt-3'>
+                <p>
+                  id:
+                  <em>{{id}}</em>
+                </p>
+                <p>
+                  name:
+                  <b>{{name}}</b>
+                </p>
+                <p>
+                  gender:
+                  <em>{{gender}}</em>
+                </p>
+                <p>
+                  age:
+                  <em>{{age}}</em>
+                </p>
                 <ul>
                   <i>Mutual friends</i>
                   {{#each mutual_friends}}
-                    <li>
-                      id:
-                      <em>{{id}}</em>,
-                      <br />
-                      name:
-                      <b>{{name}}</b>,
-                      <br />
-                      gender:
-                      <em>{{gender}}</em>,
-                      <br />
-                      age:
-                      <em>{{age}}</em>
+                    <li class='mt-3'>
+                      <p>
+                        id:
+                        <em>{{id}}</em>
+                      </p>
+                      <p>
+                        name:
+                        <b>{{name}}</b>
+                      </p>
+                      <p>
+                        gender:
+                        <em>{{gender}}</em>
+                      </p>
+                      <p>
+                        age:
+                        <em>{{age}}</em>
+                      </p>
                       <ol>
                         {{#each mutual_friends}}
                           <i>Mutual friends</i>
-                          <li>
-                            id:
-                            <em>{{id}}</em>,
-                            <br />
-                            name:
-                            <b>{{name}}</b>,
-                            <br />
-                            gender:
-                            <em>{{gender}}</em>,
-                            <br />
-                            age:
-                            <em>{{age}}</em>
-
+                          <li class='mt-3'>
+                            <p>
+                              id:
+                              <em>{{id}}</em>
+                            </p>
+                            <p>
+                              name:
+                              <b>{{name}}</b>
+                            </p>
+                            <p>
+                              gender:
+                              <em>{{gender}}</em>
+                            </p>
+                            <p>
+                              age:
+                              <em>{{age}}</em>
+                            </p>
                           </li>
                         {{/each}}
                       </ol>
@@ -71,30 +90,39 @@
                 <ul>
                   {{#each groups}}
                     <i>Group</i>
-                    <li>
-                      id:
-                      <em>{{id}}</em>,
-                      <br />
-                      name:
-                      <b>{{name}}</b>,
-                      <br />
-                      description:
-                      <em>{{description}}</em>
+                    <li class='mt-3'>
+                      <p>
+                        id:
+                        <em>{{id}}</em>
+                      </p>
+                      <p>
+                        name:
+                        <b>{{name}}</b>
+                      </p>
+                      <p>
+                        description:
+                        <em>{{description}}</em>
+                      </p>
                       <ul>
                         <i>Members</i>
                         {{#each members}}
-                          <li>
-                            id:
-                            <em>{{id}}</em>,
-                            <br />
-                            name:
-                            <b>{{name}}</b>,
-                            <br />
-                            gender:
-                            <em>{{gender}}</em>,
-                            <br />
-                            age:
-                            <em>{{age}}</em>
+                          <li class='mt-3'>
+                            <p>
+                              id:
+                              <em>{{id}}</em>
+                            </p>
+                            <p>
+                              name:
+                              <b>{{name}}</b>,
+                            </p>
+                            <p>
+                              gender:
+                              <em>{{gender}}</em>,
+                            </p>
+                            <p>
+                              age:
+                              <em>{{age}}</em>
+                            </p>
                           </li>
                         {{/each}}
                       </ul>
@@ -107,30 +135,39 @@
           <ul>
             {{#each groups}}
               <i>Group</i>
-              <li>
-                id:
-                <em>{{id}}</em>,
-                <br />
-                name:
-                <b>{{name}}</b>,
-                <br />
-                description:
-                <em>{{description}}</em>
+              <li class='mt-3'>
+                <p>
+                  id:
+                  <em>{{id}}</em>
+                </p>
+                <p>
+                  name:
+                  <b>{{name}}</b>
+                </p>
+                <p>
+                  description:
+                  <em>{{description}}</em>
+                </p>
                 <ul>
                   <i>Members</i>
                   {{#each members}}
-                    <li>
-                      id:
-                      <em>{{id}}</em>,
-                      <br />
-                      name:
-                      <b>{{name}}</b>,
-                      <br />
-                      gender:
-                      <em>{{gender}}</em>,
-                      <br />
-                      age:
-                      <em>{{age}}</em>
+                    <li class='mt-3'>
+                      <p>
+                        id:
+                        <em>{{id}}</em>
+                      </p>
+                      <p>
+                        name:
+                        <b>{{name}}</b>,
+                      </p>
+                      <p>
+                        gender:
+                        <em>{{gender}}</em>,
+                      </p>
+                      <p>
+                        age:
+                        <em>{{age}}</em>
+                      </p>
                     </li>
                   {{/each}}
                 </ul>
