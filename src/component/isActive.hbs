@@ -1,0 +1,13 @@
+{{#if isActive}}
+  <div class='nav-item '>
+    <p class="nav-link active">{{text}}</p>
+  </div>
+{{else}}
+  <div {{#if isDisabled}}
+  class='nav-item nav-link disabled'
+  {{else}}
+   class='nav-item nav-link'
+   {{/if}}>
+    <p >{{text}}</p>
+  </div>
+{{/if}}

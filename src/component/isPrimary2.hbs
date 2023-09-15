@@ -1,0 +1,9 @@
+{{#if isPrimary}}
+  <button class='btn btn-primary mb-3'>{{text}}</button>
+{{else}}
+  <button 
+  {{#if isOutline}}
+  class='btn btn-outline-primary'
+  {{/if}}>{{text}}
+  </button>
+{{/if}}

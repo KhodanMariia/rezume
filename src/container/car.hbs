@@ -1,0 +1,290 @@
+<div>
+    <section>
+    <h1>
+        Car
+        <span class='badge bg-secondary'>New
+        </span>
+    </h1>
+       {{>title data=make  big=true}}
+      
+        <mark>
+           <b>{{model}}({{year}})</b>
+        </mark>
+
+        <b>{{color}}</b>
+</section>
+<section>
+    {{#with features}}
+    <hr>
+        {{#with interior}}
+        <h3>Interior</h3>
+            <div> 
+            {{#with seats}}
+                <b>seats: </b>
+                    {{material}},  
+                    {{color}},
+                    {{heated}},
+                    {{ventilated}} 
+           {{/with}}
+           </div>
+
+            <div>
+                {{#with dashboard}}
+                <b>dashboard: </b>
+                        {{material}},  
+                        {{color}}
+                        {{#with display}}
+                        <b>display: </b>
+                            {{type}},
+                            {{size}},
+                            {{resolution}},
+                            {{touchscreen}}
+                        {{/with}}
+                {{/with}}
+            </div>
+
+            <div>
+            {{#with audio}}
+               <b>audio: </b>
+                  system({{system}}),  
+                  speakers({{speakers}}),
+                  subwoofer({{subwoofer}}),
+                  bluetooth({{bluetooth}}),
+                  USB({{USB}})
+           {{/with}}
+           </div>
+
+        {{/with}}
+        <hr>
+        {{#with exterior}}
+         <div>
+            {{#with wheels}}
+            <h3>Exterior</h3>
+                <b>wheels: </b>
+                   size({{size}}),
+                   type({{type}}),
+                   color({{color}})
+            {{/with}}
+         </div>
+         <div>
+            {{#with headlights}}
+                <b>headlights: </b>
+                  type({{type}}),
+                   brightness({{brightness}}),
+                   automatic({{automatic}})
+            {{/with}}
+         </div>
+         <div>
+            {{#with sunroof}}
+                <b>sunroof: </b>
+                  type({{type}}),
+                   size({{size}}),
+                   automatic({{automatic}})
+            {{/with}}
+         </div>
+        {{/with}}
+        <hr>
+        {{#with safety}}
+          <div>
+            {{#with airbags}}
+            <h3>Safety</h3>
+                <b>airbags: </b>
+                  front({{front}}),
+                   side({{side}}),
+                   knee({{knee}}),
+                   rear({{rear}})
+            {{/with}}
+         </div>
+          <div>
+            {{#with assistance}}
+                <b>assistance: </b>
+                <br>
+                blind spot monitoring({{blind_spot_monitoring}}),
+                <br>
+                rear cross traffic alert({{rear_cross_traffic_alert}}),
+                <br>
+                lane departure warning({{lane_departure_warning}}),
+                <br>
+                adaptive cruise control({{adaptive_cruise_control}}),
+                <br>
+                collision warning({{collision_warning}})
+            {{/with}}
+         </div>
+        {{/with}}
+    {{/with}}
+</section>
+<hr>
+<section>
+    <div>
+    {{#with engine}}
+     <h3>Engine</h3>
+         <b>type: </b>{{type}},
+         <br>
+         <b>displacement: </b>{{displacement}},
+         <br>
+         <b>horsepower: </b>{{horsepower}},
+         <br>
+         <b>torque: </b>{{torque}},
+         <br>
+         {{#with transmission}}
+                <b>transmission: </b>
+                type({{type}}),
+                gears({{gears}})
+         {{/with}}
+    {{/with}}
+    </div>
+</section>
+<hr>
+<section>
+    <div>
+        {{#with fuel_economy}}
+            <h3>Fuel economy</h3>
+               <b>city: </b>{{city}},
+               <br>
+               <b>highway: </b>{{highway}},
+               <br>
+               <b>combined: </b>{{combined}}
+         {{/with}}
+    </div>
+</section>
+<hr>
+<section>
+    <div>
+        {{#with price}}
+            <h3>Price</h3>
+               <b>base: </b>{{base}},
+               <br>
+               <b>destination: </b>{{destination}},
+               <br>
+               {{#with options}}
+                    <b>options: </b>
+                    <br>
+                    navigation({{navigation}}),
+                    <br>
+                    moonroof({{moonroof}}),
+                    <br>
+                    premium paint({{premium_paint}})
+               {{/with}}
+               <br>
+               <mark>
+               <b>total: {{total}}</b>
+               </mark>
+         {{/with}}
+    </div>
+</section>
+</div>
+<hr>
+<section>
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Car</div>
+      <div class="card-body">
+        <h5 class="card-title">{{make}}</h5>
+        <p class="card-text">
+            <b>{{model}}({{year}})<br>{{color}}</b>
+        </p>
+      </div>
+    </div>
+  </div>  
+  {{#with features}}
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../model}}({{../year}})</div>
+        {{#with interior}}
+          <div class="card-body">
+            {{#with seats}}
+              <h5 class="card-title"><b>seats: </b></h5>
+              <p class="card-text">  
+                {{material}},  
+                {{color}},
+                {{heated}},
+                {{ventilated}} 
+              </p>     
+            {{/with}}         
+          </div>
+      </div>
+    </div>  
+    <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../model}}({{../../year}})</div>
+        <div class="card-body">
+        {{#with dashboard}}
+          <h5 class="card-title">dashboard:</h5>
+          <p class="card-text">
+            {{material}},  
+            {{color}}
+          </p>
+      </div>
+    </div>
+    <div class="card text-bg-danger mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../../model}}({{../../../year}})</div>
+      <div class="card-body">
+        {{#with display}}
+        <h5 class="card-title">display</h5>
+        <p class="card-text">
+            {{type}},
+            {{size}},
+            {{resolution}},
+            {{touchscreen}}
+        </p>
+        {{/with}}
+      </div>
+    </div>
+    {{/with}}
+    <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../model}}({{../../year}})</div>
+      <div class="card-body">
+        {{#with audio}}
+                  <h5 class="card-title">audio:</h5>
+                  <p class="card-text">
+                      system({{system}}),  
+                      speakers({{speakers}}),
+                      subwoofer({{subwoofer}}),
+                      bluetooth({{bluetooth}}),
+                      USB({{USB}})
+                      </p>
+              {{/with}}
+      </div>
+    </div>
+    {{/with}}
+    {{#with exterior}}
+    <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../model}}({{../../year}})</div>
+      <div class="card-body">
+          {{#with headlights}}
+                <h5 class="card-title">headlights</h5>
+                  <p class="card-text">
+                      type({{type}}),
+                      brightness({{brightness}}),
+                      automatic({{automatic}})
+                    </p>
+            {{/with}}
+      </div>
+    </div>
+
+    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../model}}({{../../year}})</div>
+      <div class="card-body">
+        {{#with wheels}}
+                    <h5 class="card-title">wheels</h5>
+                    <p class="card-text">
+                      size({{size}}),
+                      type({{type}}),
+                      color({{color}})
+                    </p>
+        {{/with}}
+      </div>
+    </div>
+    <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">{{../../model}}({{../../year}})</div>
+      <div class="card-body">
+        {{#with sunroof}}
+            <h5 class="card-title">sunroof</h5>
+                <p class="card-text">
+                    type({{type}}),
+                    size({{size}}),
+                    automatic({{automatic}})
+                </p>
+        {{/with}}
+      </div>
+    </div>
+  {{/with}}
+  {{/with}}
+</section>

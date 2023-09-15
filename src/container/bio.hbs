@@ -1,0 +1,180 @@
+{{!
+Це код container файлу для education сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+}}
+
+<main class="m-5">
+  <section  class="card">
+    <div class="card-body">
+      <h1 class="mb-5">{{name}}</h1>
+      <p>
+        <b>birthdate:</b>{{birthdate}}
+      </p>
+      <p>
+        <b>birthplace:</b>:{{birthplace}}
+      </p>
+      <p>
+        <b>deathdate:</b>{{deathdate}}
+      </p>
+      <p>
+        <b>deathplace:</b>{{deathplace}}
+      </p>
+      <p>
+        <b>nationality:</b>{{nationality}}
+      </p>
+      <p>
+        <b>occupation:</b>{{occupation}}
+      </p>
+      <p>
+        <b>known for:</b>{{known_for}}
+      </p>
+    </div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>Education:</h3>
+      <ul>
+        {{#each education}}
+          <li>
+            <b>degree:</b>
+            {{degree}}
+          </li>
+          <li>
+            <b>field:</b>
+            {{field}}
+          </li>
+          <li>
+            <b>institution:</b>
+            {{institution}}
+          </li>
+          <li>
+            <b>year:</b>
+            {{year}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>Notable publications:</h3>
+      <ul>
+        {{#each notable_publications}}
+          <li>
+            <b>{{title}}({{year}})</b>
+            <p>publisher:{{publisher}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <section class="card mt-3"> 
+    <div class="card-body">
+      <h3>partners:</h3>
+      <ul>
+        {{#each partners}}
+          <li>
+            <b>{{name}}</b>
+            <p>
+              <b>relationship:</b>
+              {{relationship}}
+            </p>
+            <p>
+              <b>years:</b>
+              {{years}}
+            </p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>awards:</h3>
+      <ul>
+        {{#each awards}}
+          <li>
+            <b>{{title}}({{year}})</b>
+            <p>
+              <b>description:</b>
+              {{description}}
+            </p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>Influences:</h3>
+      {{#with influences}}
+        {{0}}
+        <br />
+        {{1}}
+        <br />
+        {{2}}
+      {{/with}}
+    </div>
+    <div class="card-body">
+      <h3>Influenced:</h3>
+      {{#with influenced}}
+        {{0}}
+        <br />
+        {{1}}
+        <br />
+        {{2}}
+        <br />
+        {{3}}
+      {{/with}}
+    </div>
+    <div class="card-body">
+      <h3> quotes:</h3>
+      {{#with quotes}}
+        {{0}}
+        <br />
+        {{1}}
+        <br />
+        {{2}}
+        <br />
+        {{3}}
+      {{/with}}</div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>Major discoveries:</h3>
+      <ul>
+        {{#each major_discoveries}}
+          <li>
+            <b>{{title}}({{year}})</b>
+            <p>
+              <b>description:</b>
+              <br />
+              {{description}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+  <section class="card mt-3">
+    <div class="card-body">
+      <h3>Contributions:</h3>
+      {{#with contributions}}
+        <b>{{title}}</b>
+        <p>
+          <b>description:</b>
+          <br />
+          {{description}}
+        </p>
+        <p>
+          <b>year:</b>
+          {{year}}
+        </p>
+        <p>
+          <b>field:</b>
+          {{field}}
+        </p>
+      {{/with}}
+    </div>
+  </section>
+
+</div>
