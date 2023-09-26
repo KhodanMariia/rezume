@@ -147,35 +147,35 @@ p:only-of-type {
       Використовуйте селектор назви атрибута-
    */
 
-a[href] {
+.lesson-three-task-one a[href] {
   color: white;
 }
 
 /*Завдання №2. Зайдайте жовтий колір тексту всім елементам списку які мають атрибут value
       Використовуйте селектор назви атрибута */
 
-li[value] {
+.lesson-three-task-two li[value] {
   color: yellow;
 }
 
 /* Завдання №3. Застосуйте селектор значення атрибута,
    щоб встановити червоний фон всім елементам списку які мають атрибут 
    value зі значенням '3' */
-li[value="3"] {
+.lesson-three-task-three li[value="3"] {
   background: red;
 }
 
 /* Завдання №4. Застосуйте селектор наявності значення атрибута,
     щоб встановити синій фон для кнопки з класом "primary"  .*/
 
-button[class~="primary"] {
+.lesson-three-task-four button[class~="primary"] {
   background: blue;
 }
 
 /* Завдання №5. Надайте червоний фон всім кнопка назви класу яких починаються зі слова secondary */
 /*  Використовуйте селектор префіксу значення атрибута */
 
-button[class^="secondary"] {
+.lesson-three-task-five button[class^="secondary"] {
   background: red;
 }
 
