@@ -49,8 +49,6 @@ router.get('/', function (req, res) {
 
 // ================================================================
 
-<<<<<<< HEAD
-=======
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -3391,6 +3389,6 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
->>>>>>> fa565a83a2daee96baf126eb4cf819ead6fa51b7
+
 // Підключаємо роутер до бек-енду
 module.exports = router
