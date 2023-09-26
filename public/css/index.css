@@ -147,7 +147,7 @@ p:only-of-type {
       Використовуйте селектор назви атрибута-
    */
 
-.lesson-three-task-one a[href] {
+.lesson-three-task-one nav a[href] {
   color: white;
 }
 
